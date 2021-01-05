@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".SplashScreen">
+
+    <ImageView
+        android:id="@+id/stopWatchAnimationSplashScreen"
+        android:layout_width="300dp"
+        android:src="@drawable/splash_screen_image"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stopWatchAnimationSplashScreen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:fontFamily="serif"
+        android:text="Stopwatch by Aditya Bhardwaj"
+        android:textColor="#FF5722"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Time is Money."
+        android:textColor="#FF5722"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+</RelativeLayout>
