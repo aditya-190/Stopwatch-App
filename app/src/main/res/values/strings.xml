@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Stop Watch</string>
+    <string name="splash_screen">Splash Screen</string>
+    <string name="stopwatch_by_aditya_bhardwaj">Stopwatch by Aditya Bhardwaj</string>
+    <string name="time_is_money">Time is Money.</string>
 </resources>

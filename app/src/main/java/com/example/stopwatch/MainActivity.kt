@@ -1,54 +1,46 @@
-package com.example.stopwatch;
+package com.example.stopwatch
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle
+import android.os.SystemClock
+import android.widget.Chronometer
+import androidx.appcompat.app.AppCompatActivity
+import com.airbnb.lottie.LottieAnimationView
 
-import android.animation.ObjectAnimator;
-import android.os.Bundle;
-import android.os.SystemClock;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.LinearInterpolator;
-import android.widget.Chronometer;
-import android.widget.ImageView;
-
-import com.airbnb.lottie.LottieAnimationView;
-
-public class MainActivity extends AppCompatActivity {
-    Chronometer stopWatchTime;
-    LottieAnimationView buttonPlayPause, stopWatchAnimation;
-    boolean isPause = false;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        buttonPlayPause = findViewById(R.id.buttonPlayPause);
-        stopWatchAnimation = findViewById(R.id.stopWatchAnimation);
-        stopWatchTime = findViewById(R.id.stopWatchTime);
-
-        buttonPlayPause.setOnClickListener(v -> {
-            isPause = !isPause;
+class MainActivity : AppCompatActivity() {
+    private var isPause = false
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        findViewById<LottieAnimationView>(R.id.buttonPlayPause).setOnClickListener { view ->
+            isPause = !isPause
             if (isPause) {
-                stopWatchTime.setBase(SystemClock.elapsedRealtime());
-                stopWatchTime.start();
+                findViewById<Chronometer>(R.id.stopWatchTime).let {chronometer ->
+                    chronometer.base = SystemClock.elapsedRealtime()
+                    chronometer.start()
+                }
 
-                buttonPlayPause.setSpeed(2f);
-                buttonPlayPause.playAnimation();
+                findViewById<LottieAnimationView>(R.id.buttonPlayPause).let { lottie ->
+                    lottie.speed = 2F
+                    lottie.playAnimation()
+                }
 
-                stopWatchAnimation.setSpeed(0.1f);
-                stopWatchAnimation.postDelayed(() -> stopWatchAnimation.playAnimation(), 100);
-
+                findViewById<LottieAnimationView>(R.id.stopWatchAnimation).let { lottie ->
+                    lottie.speed = 0.1F
+                    lottie.postDelayed({ lottie.playAnimation() }, 100)
+                }
             } else {
-                stopWatchTime.stop();
+                findViewById<Chronometer>(R.id.stopWatchTime).stop()
 
-                buttonPlayPause.setSpeed(-2f);
-                buttonPlayPause.playAnimation();
+                findViewById<LottieAnimationView>(R.id.buttonPlayPause).let { lottie ->
+                    lottie.speed = -2F
+                    lottie.playAnimation()
+                }
 
-                stopWatchAnimation.setSpeed(0.1f);
-                stopWatchAnimation.postDelayed(() -> stopWatchAnimation.pauseAnimation(), 100);
+                findViewById<LottieAnimationView>(R.id.stopWatchAnimation).let {lottie ->
+                    lottie.speed = 0.1F
+                    lottie.postDelayed({ lottie.pauseAnimation() }, 100)
+                }
             }
-        });
+        }
     }
 }
