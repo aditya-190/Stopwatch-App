@@ -1,4 +1,4 @@
-package com.example.stopwatch
+package com.bhardwaj.stopwatch
 
 import android.os.Bundle
 import android.os.SystemClock

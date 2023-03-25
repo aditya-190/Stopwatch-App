@@ -1,4 +1,4 @@
-package com.example.stopwatch;
+package com.bhardwaj.stopwatch;
 
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.stopwatch">
+    package="com.bhardwaj.stopwatch">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StopWatch">
-        <activity android:name="com.example.stopwatch.SplashScreen"
+        <activity android:name="com.bhardwaj.stopwatch.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +19,7 @@
         </activity>
         <activity
             android:exported="false"
-            android:name="com.example.stopwatch.MainActivity"/>
+            android:name="com.bhardwaj.stopwatch.MainActivity"/>
     </application>
 
 </manifest>

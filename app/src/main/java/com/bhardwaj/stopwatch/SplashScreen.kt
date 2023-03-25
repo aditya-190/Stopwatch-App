@@ -1,4 +1,4 @@
-package com.example.stopwatch
+package com.bhardwaj.stopwatch
 
 import android.content.Intent
 import android.os.Bundle

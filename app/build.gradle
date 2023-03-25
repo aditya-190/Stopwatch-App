@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.stopwatch"
+        applicationId "com.bhardwaj.stopwatch"
         minSdkVersion 23
         targetSdkVersion 33
         versionCode 3
@@ -27,7 +27,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
-    namespace 'com.example.stopwatch'
+    namespace 'com.bhardwaj.stopwatch'
 }
 
 dependencies {
