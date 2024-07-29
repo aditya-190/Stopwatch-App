@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        findViewById<LottieAnimationView>(R.id.buttonPlayPause).setOnClickListener { view ->
+        findViewById<LottieAnimationView>(R.id.buttonPlayPause).setOnClickListener {
             isPause = !isPause
             if (isPause) {
                 findViewById<Chronometer>(R.id.stopWatchTime).let {chronometer ->
