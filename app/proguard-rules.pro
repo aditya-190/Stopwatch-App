@@ -19,3 +19,9 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Suppress warnings about missing javax.annotation.Nullable
+-dontwarn javax.annotation.Nullable
+
+# Keep the javax.annotation.Nullable class if needed
+-keep class javax.annotation.Nullable
